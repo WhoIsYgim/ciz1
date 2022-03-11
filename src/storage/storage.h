@@ -1,5 +1,6 @@
 #pragma once
 #include "stdio.h"
+#include "stdlib.h"
 #include "warship.h"
 
 typedef struct
@@ -18,4 +19,4 @@ void condition_search(Storage* storage, char* condition);
 void year_search(Storage* storage, int year);
 void crew_search(Storage* storage, int crew);
 
-void warship_print (Warship ship);
+void warship_display (Warship ship);
