@@ -1,5 +1,5 @@
 #include "storage.h"
-
+#include <string.h>
 
 Storage* storage_constructor(size_t length, size_t capacity)
 {
@@ -30,6 +30,8 @@ void new_warship(Storage* storage, char* name, char* shipyard, char* campaign, c
     }
     storage->ship[storage->length] = *temp;
     ++storage->length;
+    free(temp);
+
 
 }
 
@@ -38,7 +40,7 @@ void name_search(Storage* storage, char* name)
     int flag = 0;
     for(size_t i = 0; i < storage->length; ++i)
     {
-        if (storage->ship[i].name == name)
+        if (!strcmp(storage->ship[i].name, name))
         {
             warship_display(storage->ship[i]);
             flag = 1;
@@ -54,7 +56,7 @@ void shipyard_search(Storage* storage, char* shipyard)
     int flag = 0;
     for(size_t i = 0; i < storage->length; ++i)
     {
-        if (storage->ship[i].shipyard == shipyard)
+        if (!strcmp(storage->ship[i].shipyard,shipyard))
         {
             warship_display(storage->ship[i]);
             flag = 1;
@@ -68,7 +70,7 @@ void condition_search(Storage* storage, char* condition)
     int flag = 0;
     for(size_t i = 0; i < storage->length; ++i)
     {
-        if (storage->ship[i].condition == condition)
+        if (!strcmp(storage->ship[i].condition,condition))
         {
             warship_display(storage->ship[i]);
             flag = 1;
