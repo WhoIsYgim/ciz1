@@ -71,7 +71,7 @@ int main ()
         printf("%s\n", "Input command: ");
         buf = get_str();
     }
-
+    free_storage(&storage);
 
 }
 

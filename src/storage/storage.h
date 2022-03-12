@@ -20,3 +20,5 @@ void year_search(Storage* storage, int year);
 void crew_search(Storage* storage, int crew);
 
 void warship_display (Warship ship);
+
+void free_storage(Storage** storage);

@@ -125,3 +125,15 @@ void warship_display (Warship ship)
 
 
 }
+void free_storage(Storage** storage){
+    if (*storage == NULL)
+        return;
+    if((*storage)->ship == NULL){
+        free(*storage);
+        *storage = NULL;
+        return;
+    }
+    free((*storage)->ship);
+    free(*storage);
+    *storage = NULL;
+}
