@@ -16,4 +16,6 @@ Warship* warship_constructor (char* name, char* shipyard,char* campaign, char* c
     buffer->crew = crew;
 
     return buffer;
+
+
 }

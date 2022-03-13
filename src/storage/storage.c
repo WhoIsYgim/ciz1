@@ -1,6 +1,7 @@
 #include "storage.h"
 #include <string.h>
 
+
 Storage* storage_constructor(size_t length, size_t capacity)
 {
     Storage* to_store = (Storage*)malloc(sizeof (Storage));
@@ -48,7 +49,7 @@ void name_search(Storage* storage, char* name)
     }
 
     if (flag == 0)
-        printf("%s", "There are no appropriate warships");
+        printf("%s", "There are no appropriate warships.\n");
 }
 
 void shipyard_search(Storage* storage, char* shipyard)
@@ -63,7 +64,7 @@ void shipyard_search(Storage* storage, char* shipyard)
         }
     }
     if (flag == 0)
-        printf("%s", "There are no appropriate warships");
+        printf("%s", "There are no appropriate warships.\n");
 }
 void condition_search(Storage* storage, char* condition)
 {
@@ -77,7 +78,7 @@ void condition_search(Storage* storage, char* condition)
         }
     }
     if (flag == 0)
-        printf("%s", "There are no appropriate warships");
+        printf("%s", "There are no appropriate warships.\n");
 }
 void year_search(Storage* storage, int year)
 {
@@ -91,7 +92,7 @@ void year_search(Storage* storage, int year)
         }
     }
     if (flag == 0)
-        printf("%s", "There are no appropriate warships");
+        printf("%s", "There are no appropriate warships.\n");
 }
 
 void crew_search(Storage* storage, int crew)
@@ -106,7 +107,7 @@ void crew_search(Storage* storage, int crew)
         }
     }
     if (flag == 0)
-        printf("%s", "There are no appropriate warships");
+        printf("%s", "There are no appropriate warships.\n");
 }
 
 void warship_display (Warship ship)
@@ -125,6 +126,7 @@ void warship_display (Warship ship)
 
 
 }
+
 void free_storage(Storage** storage){
     if (*storage == NULL)
         return;

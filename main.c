@@ -7,7 +7,7 @@
 #include "input.h"
 
 const char* name = "name";
-const char* shipyard = "shipyard";
+const char* shipyard = "ship";
 const char* condition = "cond";
 const char* year = "year";
 const char* crew = "crew";
@@ -55,14 +55,16 @@ int main ()
         }
         else if (!strcmp(buf, year)) {
             printf("%s", "Input the launch year:\n ");
+            buf = get_str();
             int launch;
-            scanf("%d", &launch);
+            launch = atoi(buf);
             year_search(storage, launch);
         }
         else if (!strcmp(buf, crew)) {
             printf("%s", "Input crew size:\n ");
+            buf = get_str();
             int crew_s;
-            scanf("%d", &crew_s);
+            crew_s = atoi(buf);
             crew_search(storage, crew_s);
         }
         else {
@@ -71,8 +73,10 @@ int main ()
         printf("%s\n", "Input command: ");
         buf = get_str();
     }
-    free_storage(&storage);
 
+
+    free_storage(&storage);
 }
+
 
 
