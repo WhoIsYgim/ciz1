@@ -1,5 +1,5 @@
 #pragma once
-#include "stdio.h"
+
 
 typedef struct {
     char* name;
@@ -12,3 +12,5 @@ typedef struct {
 } Warship;
 
 Warship* warship_constructor (char* name, char* shipyard,char* campaign, char* condition, int year, int crew);
+
+void warship_display (Warship ship);

@@ -3,6 +3,21 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define  MAX_LEN 100
+
+
+char* get_str() {
+    char* str = (char*) malloc(sizeof (char)*MAX_LEN);
+    if(!str){
+        return NULL;
+    }
+    size_t count = sizeof (char)*MAX_LEN;
+    getline(&str,&count, stdin);
+    str[strlen(str)-1] = '\0';
+    return str;
+}
+
+/* //alternative input funk
 char get_ch(){
     char c = '\0';
     int res = 0;
@@ -39,4 +54,6 @@ char* get_str()
     }
     return buffer.str;
 }
+
+*/
 

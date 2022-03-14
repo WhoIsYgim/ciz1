@@ -1,9 +1,12 @@
 #include "storage.h"
+
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 
-Storage* storage_constructor(size_t length, size_t capacity)
-{
+Storage* storage_constructor(size_t length, size_t capacity){
     Storage* to_store = (Storage*)malloc(sizeof (Storage));
 
     to_store->length = length;
@@ -12,10 +15,12 @@ Storage* storage_constructor(size_t length, size_t capacity)
 
 }
 
-void new_warship(Storage* storage, char* name, char* shipyard, char* campaign, char* condition, int year, int crew)
-{
+void add_warship(Storage* storage, char* name, char* shipyard, char* campaign, char* condition, int year, int crew){
     Warship* temp = (Warship*) malloc(sizeof (Warship));
 
+    if(!temp){
+        return;
+    }
     temp->name = name;
     temp->shipyard = shipyard;
     temp->campaign = campaign;
@@ -23,11 +28,12 @@ void new_warship(Storage* storage, char* name, char* shipyard, char* campaign, c
     temp->year = year;
     temp->crew = crew;
 
-    if(storage->length+1 >= storage->capacity)
-    {
+    if(storage->length+1 >= storage->capacity){
         storage->capacity *=2;
         storage->ship = (Warship*) realloc(storage->ship, sizeof(Warship)*storage->capacity);
-
+        if(!storage->ship){
+            return;
+        }
     }
     storage->ship[storage->length] = *temp;
     ++storage->length;
@@ -36,13 +42,14 @@ void new_warship(Storage* storage, char* name, char* shipyard, char* campaign, c
 
 }
 
-void name_search(Storage* storage, char* name)
-{
+void name_search(Storage* storage, char* name){
+    if(storage == NULL){
+        printf("Storage is empty!\n");
+        return;
+    }
     int flag = 0;
-    for(size_t i = 0; i < storage->length; ++i)
-    {
-        if (!strcmp(storage->ship[i].name, name))
-        {
+    for(size_t i = 0; i < storage->length; ++i){
+        if (!strcmp(storage->ship[i].name, name)){
             warship_display(storage->ship[i]);
             flag = 1;
         }
@@ -52,41 +59,14 @@ void name_search(Storage* storage, char* name)
         printf("%s", "There are no appropriate warships.\n");
 }
 
-void shipyard_search(Storage* storage, char* shipyard)
-{
-    int flag = 0;
-    for(size_t i = 0; i < storage->length; ++i)
-    {
-        if (!strcmp(storage->ship[i].shipyard,shipyard))
-        {
-            warship_display(storage->ship[i]);
-            flag = 1;
-        }
+void shipyard_search(Storage* storage, char* shipyard){
+    if(storage == NULL){
+        printf("Storage is empty!\n");
+        return;
     }
-    if (flag == 0)
-        printf("%s", "There are no appropriate warships.\n");
-}
-void condition_search(Storage* storage, char* condition)
-{
     int flag = 0;
-    for(size_t i = 0; i < storage->length; ++i)
-    {
-        if (!strcmp(storage->ship[i].condition,condition))
-        {
-            warship_display(storage->ship[i]);
-            flag = 1;
-        }
-    }
-    if (flag == 0)
-        printf("%s", "There are no appropriate warships.\n");
-}
-void year_search(Storage* storage, int year)
-{
-    int flag = 0;
-    for(size_t i = 0; i < storage->length; ++i)
-    {
-        if (storage->ship[i].year == year)
-        {
+    for(size_t i = 0; i < storage->length; ++i){
+        if (!strcmp(storage->ship[i].shipyard,shipyard)){
             warship_display(storage->ship[i]);
             flag = 1;
         }
@@ -95,13 +75,29 @@ void year_search(Storage* storage, int year)
         printf("%s", "There are no appropriate warships.\n");
 }
 
-void crew_search(Storage* storage, int crew)
-{
+void condition_search(Storage* storage, char* condition){
+    if(storage == NULL){
+        printf("Storage is empty!\n");
+        return;
+    }
     int flag = 0;
-    for(size_t i = 0; i < storage->length; ++i)
-    {
-        if (storage->ship[i].crew == crew)
-        {
+    for(size_t i = 0; i < storage->length; ++i){
+        if (!strcmp(storage->ship[i].condition,condition)){
+            warship_display(storage->ship[i]);
+            flag = 1;
+        }
+    }
+    if (flag == 0)
+        printf("%s", "There are no appropriate warships.\n");
+}
+void year_search(Storage* storage, int year){
+    if(storage == NULL){
+        printf("Storage is empty!\n");
+        return;
+    }
+    int flag = 0;
+    for(size_t i = 0; i < storage->length; ++i){
+        if (storage->ship[i].year == year){
             warship_display(storage->ship[i]);
             flag = 1;
         }
@@ -110,22 +106,23 @@ void crew_search(Storage* storage, int crew)
         printf("%s", "There are no appropriate warships.\n");
 }
 
-void warship_display (Warship ship)
-{
-    printf("%s%s%s", "'", ship.name, "'\n");
-    printf("%s", "\t Year of launch: ");
-    printf("%d%s", ship.year,"\n");
-    printf("%s", "\t Shipyard: ");
-    puts(ship.shipyard);
-    printf("%s", "\t Campaign: ");
-    puts(ship.campaign);
-    printf("%s", "\t Condition: ");
-    puts(ship.condition);
-    printf("%s", "\t Crew size: ");
-    printf("%d%s", ship.crew,"\n");
-
-
+void crew_search(Storage* storage, int crew){
+    if(storage == NULL){
+        printf("Storage is empty!\n");
+        return;
+    }
+    int flag = 0;
+    for(size_t i = 0; i < storage->length; ++i){
+        if (storage->ship[i].crew == crew){
+            warship_display(storage->ship[i]);
+            flag = 1;
+        }
+    }
+    if (flag == 0)
+        printf("%s", "There are no appropriate warships.\n");
 }
+
+
 
 void free_storage(Storage** storage){
     if (*storage == NULL)
