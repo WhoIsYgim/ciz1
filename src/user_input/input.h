@@ -3,7 +3,7 @@
 
 
 //char get_ch();
-char* get_str ();
+void get_str (FILE* in_stream, char* str);
 
 
 

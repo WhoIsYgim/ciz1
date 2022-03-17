@@ -5,12 +5,14 @@ extern "C" {
 #include "warship.h"
 #include "input.h"
 };
+#define MAX_LEN 100
 const char* name = "name";
 const char* shipyard = "shipyard";
 const char* campaign = "campaign";
 const char* condition = "condition";
 const int year = 1900;
 const int crew = 500;
+
 
 TEST (STORAGE_CONSTRUCTOR, TEST_STORAGE_CONSTRUCTOR) {
     size_t exp_len = 0;
@@ -42,4 +44,14 @@ TEST (ADD_WARSHIP, TEST_ADD_WARSHIP) {
 }
 
 
+TEST (USER_INPUT, TEST_USER_INPUT){
 
+    char* input_str = "name";
+    FILE* in_stream = fmemopen(input_str, strlen(input_str),"r");
+
+    char* test_buf = (char*) malloc(sizeof(char )*MAX_LEN);
+
+    get_str(in_stream,test_buf);
+
+    EXPECT_TRUE(strcmp(test_buf,input_str));
+}

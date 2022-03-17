@@ -7,6 +7,8 @@
 #include "warship.h"
 #include "input.h"
 #include "interface.h"
+#define MAX_LEN 100
+
 
 const char* name = "name";
 const char* shipyard = "ship";
@@ -25,9 +27,10 @@ int main ()
     add_warship(storage, "C", "Admiralty", "ABC", "defeated", 1900, 600);
     add_warship(storage, "D", "USA", "ABC", "defeated", 1900, 600);
 
-   console_output();
+    console_output();
 
-    char *buf = get_str();
+    char *buf =(char*) malloc(sizeof (char)*MAX_LEN);
+    get_str(stdin, buf);
 
     input_interface(storage, buf, name,shipyard,condition,year,crew,stop);
 

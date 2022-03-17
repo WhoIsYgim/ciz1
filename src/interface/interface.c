@@ -25,49 +25,44 @@ void input_interface(Storage* storage, char* buf, const char* name, const char* 
 
         if (!strcmp(buf, name)) {
             printf("%s", "Input name of warship:\n ");
-            free(buf);
-            buf = get_str();
+
+            get_str(stdin, buf);
             name_search(storage, buf);
         }
         else if (!strcmp(buf, shipyard)) {
             printf("%s", "Input name of shipyard:\n ");
-            free(buf);
-            buf = get_str();
+
+            get_str(stdin, buf);
             shipyard_search(storage, buf);
         }
         else if (!strcmp(buf, condition)) {
             printf("%s", "Input condition:\n ");
-            free(buf);
-            buf = get_str();
+            get_str(stdin, buf);
             condition_search(storage, buf);
         }
         else if (!strcmp(buf, year)) {
             printf("%s", "Input the launch year:\n ");
-            free(buf);
-            buf = get_str();
+            get_str(stdin, buf);
             int launch;
             launch = atoi(buf);
             if(launch == 0) {
                 printf("Launch year recognition error.\n");
                 printf("%s\n", "Input command: ");
-                free(buf);
-                buf = get_str();
+                get_str(stdin, buf);
                 continue;
             }
             year_search(storage, launch);
         }
         else if (!strcmp(buf, crew)) {
             printf("%s", "Input crew size:\n ");
-            free(buf);
-            buf = get_str();
+            get_str(stdin, buf);
             int crew_s;
             crew_s = atoi(buf);
 
             if(crew_s == 0) {
                 printf("Crew size recognition error.\n");
                 printf("%s\n", "Input command: ");
-                free(buf);
-                buf = get_str();
+                get_str(stdin, buf);
                 continue;
             }
             crew_search(storage, crew_s);
@@ -76,6 +71,6 @@ void input_interface(Storage* storage, char* buf, const char* name, const char* 
             printf("%s\n","Unknown command. ");
         }
         printf("%s\n", "Input command: ");
-        buf = get_str();
+        get_str(stdin, buf);
     }
 }
