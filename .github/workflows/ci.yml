@@ -4,9 +4,10 @@ on:
   push:
     branches: [ main, dev ]
     pull_request:
-      branches: [ main, dev ]
+      branches: [ main ]
 
 jobs:
+
     test:
       runs-on: ubuntu-latest
 
@@ -17,10 +18,7 @@ jobs:
           run: sudo apt install libgtest-dev
 
         - name: build
-          run: cmake -B ./build
-
-        - name: make
-          run: cmake --build ./build
+          run: mkdir build && cd build && cmake .. && cmake --build .
 
         - name: run-tests
-          run: ./build/tests/tests
+          run: ./tests/tests
