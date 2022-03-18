@@ -16,6 +16,4 @@ void warship_display (Warship ship){
     puts(ship.condition);
     printf("%s", "\t Crew size: ");
     printf("%d%s", ship.crew,"\n");
-
-
 }

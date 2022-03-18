@@ -55,3 +55,4 @@ TEST (USER_INPUT, TEST_USER_INPUT){
 
     EXPECT_TRUE(strcmp(test_buf,input_str));
 }
+

@@ -22,21 +22,18 @@ int main ()
 
     Storage* storage = storage_constructor(0,1);
 
-    add_warship(storage, "Aurora", "Admiralty", "ABC", "Museum ship", 1900, 570);
-    add_warship(storage, "B", "Admiralty", "ABC", "working", 1910, 400);
-    add_warship(storage, "C", "Admiralty", "ABC", "defeated", 1900, 600);
-    add_warship(storage, "D", "USA", "ABC", "defeated", 1900, 600);
+    add_warship(storage, "A", "A", "ABC", "A", 1900, 570);
+    add_warship(storage, "B", "B", "ABC", "B", 1910, 600);
+    add_warship(storage, "C", "C", "ABC", "C", 1900, 600);
+    add_warship(storage, "D", "D", "ABC", "D", 1900, 600);
 
     console_output();
 
     char *buf =(char*) malloc(sizeof (char)*MAX_LEN);
     get_str(stdin, buf);
 
-    input_interface(storage, buf, name,shipyard,condition,year,crew,stop);
+    input_interface(storage, buf);
 
     free(buf);
     free_storage(&storage);
 }
-
-
-

@@ -12,3 +12,4 @@ add_executable(main main.c)
 add_subdirectory(src)
 add_subdirectory(tests)
 target_link_libraries(main LINK_PUBLIC warship storage user_input interface)
+

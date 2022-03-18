@@ -11,5 +11,4 @@ typedef struct {
 
 } Warship;
 
-
 void warship_display (Warship ship);

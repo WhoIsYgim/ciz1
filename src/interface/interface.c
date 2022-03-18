@@ -20,27 +20,27 @@ void console_output() {
 
 }
 
-void input_interface(Storage* storage, char* buf, const char* name, const char* shipyard, const char* condition, const char* year, const char* crew, const char* stop){
-    while (abs(strcmp(buf,stop))) {
+void input_interface(Storage* storage, char* buf){
+    while (abs(strcmp(buf,"stop"))) {
 
-        if (!strcmp(buf, name)) {
+        if (!strcmp(buf, "name")) {
             printf("%s", "Input name of warship:\n ");
 
             get_str(stdin, buf);
             name_search(storage, buf);
         }
-        else if (!strcmp(buf, shipyard)) {
+        else if (!strcmp(buf, "shipyard")) {
             printf("%s", "Input name of shipyard:\n ");
 
             get_str(stdin, buf);
             shipyard_search(storage, buf);
         }
-        else if (!strcmp(buf, condition)) {
+        else if (!strcmp(buf, "condition")) {
             printf("%s", "Input condition:\n ");
             get_str(stdin, buf);
             condition_search(storage, buf);
         }
-        else if (!strcmp(buf, year)) {
+        else if (!strcmp(buf, "year")) {
             printf("%s", "Input the launch year:\n ");
             get_str(stdin, buf);
             int launch;
@@ -53,7 +53,7 @@ void input_interface(Storage* storage, char* buf, const char* name, const char* 
             }
             year_search(storage, launch);
         }
-        else if (!strcmp(buf, crew)) {
+        else if (!strcmp(buf, "crew")) {
             printf("%s", "Input crew size:\n ");
             get_str(stdin, buf);
             int crew_s;
