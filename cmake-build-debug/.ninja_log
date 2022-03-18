@@ -1,0 +1,24 @@
+# ninja log v5
+70	79	1647639742184206396	src/interface/libinterface.a	675d0651014a2031
+1	48	1647639742152204690	src/user_input/CMakeFiles/user_input.dir/input.c.o	ad66c0d2b133d4c5
+63	70	1647639742176205969	src/storage/libstorage.a	2af3e023d1a137b1
+1	63	1647639742168205543	src/storage/CMakeFiles/storage.dir/storage.c.o	6937d1382c81c53a
+2	52	1647639742160205116	src/interface/CMakeFiles/interface.dir/interface.c.o	3baf37dc45ed7bda
+1	47	1647639742152204690	src/warship/CMakeFiles/warship.dir/warship.c.o	61f387ba82db7ab4
+47	56	1647639742164205329	src/warship/libwarship.a	4960c019afeaff2a
+79	105	1647639742212207888	main	7599a10259aadb4e
+0	44	1647639742152204690	CMakeFiles/main.dir/main.c.o	9e46f61c87975357
+48	55	1647639742164205329	src/user_input/libuser_input.a	f77c99a460d531b1
+2	75	1647641406682875070	src/warship/CMakeFiles/warship.dir/warship.c.o	61f387ba82db7ab4
+2	76	1647641406682875070	src/user_input/CMakeFiles/user_input.dir/input.c.o	ad66c0d2b133d4c5
+1	76	1647641406682875070	CMakeFiles/main.dir/main.c.o	9e46f61c87975357
+3	77	1647641406682875070	src/interface/CMakeFiles/interface.dir/interface.c.o	3baf37dc45ed7bda
+75	87	1647641406694874989	src/warship/libwarship.a	4960c019afeaff2a
+76	87	1647641406694874989	src/user_input/libuser_input.a	f77c99a460d531b1
+2	91	1647641406698874961	src/storage/CMakeFiles/storage.dir/storage.c.o	6937d1382c81c53a
+91	99	1647641406706874907	src/storage/libstorage.a	2af3e023d1a137b1
+99	109	1647641406718874826	src/interface/libinterface.a	675d0651014a2031
+109	150	1647641406758874556	main	7599a10259aadb4e
+3	1258	1647641407862867139	tests/CMakeFiles/tests.dir/main.cpp.o	49555490011ce56
+4	1526	1647641408130865349	tests/CMakeFiles/tests.dir/tests.cpp.o	a46460540a6d1415
+1526	1748	1647641408354863860	tests/tests	c1d1ab868bd500a5

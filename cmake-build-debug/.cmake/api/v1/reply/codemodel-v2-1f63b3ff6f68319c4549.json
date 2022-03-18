@@ -1,0 +1,204 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						6
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/warship",
+					"jsonFile" : "directory-src.warship-Debug-aaae772e0f7efb4358cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/warship",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/storage",
+					"jsonFile" : "directory-src.storage-Debug-562a8614a868c92e8ea3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/storage",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/user_input",
+					"jsonFile" : "directory-src.user_input-Debug-fb54c64393068c699b13.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/user_input",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/interface",
+					"jsonFile" : "directory-src.interface-Debug-a88f12ce6dfb18708e23.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/interface",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "ciz1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "interface::@2b9c5a25658dc204dab7",
+					"jsonFile" : "target-interface-Debug-e3ea93d631eec870f1b0.json",
+					"name" : "interface",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-16a75f0ae79024a6ac0d.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "storage::@f9bb3bf387c1b34d62bb",
+					"jsonFile" : "target-storage-Debug-c8e5de628ffe3196172e.json",
+					"name" : "storage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "tests::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-tests-Debug-566026e08fc49309b61e.json",
+					"name" : "tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "user_input::@22b2edaa2d6cc38e30a3",
+					"jsonFile" : "target-user_input-Debug-f58f5a9343578134530a.json",
+					"name" : "user_input",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "warship::@a46fba55c83f058a15a0",
+					"jsonFile" : "target-warship-Debug-84655881e594ab1b3a90.json",
+					"name" : "warship",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/egornulllet/Документы/tpark/ciz1/cmake-build-debug",
+		"source" : "/home/egornulllet/Документы/tpark/ciz1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
