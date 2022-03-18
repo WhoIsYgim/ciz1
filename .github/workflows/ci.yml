@@ -4,29 +4,44 @@ on:
   push:
     branches: [ main, dev ]
   pull_request:
-      branches: [ main, dev ]
+    branches: [ main, dev ]
+
+env:
+  BUILD_TYPE: Release
 
 jobs:
-    build:
-      runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v2
-
-        - name: install gtest
-          run: sudo apt install libgtest-dev
-
-        - name: build
-          run: cmake -B build && cd build && make
+    steps:
+    - uses: actions/checkout@v2
     
-    test:
-      runs-on: ubuntu-latest
+    - name: install gtest
+      run: sudo apt install libgtest-dev lcov
 
-      steps:
-        - uses: actions/checkout@v2
+    - name: build
+      run: cmake -B ./build
 
-        - name: install gtest
-          run: sudo apt install libgtest-dev
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: install gtest
+      run: sudo apt install libgtest-dev lcov
+      
+    - name: build
+      run: cmake -Dtest=true -B ./build
+      
+    - name: make
+      run: cmake --build ./build
 
-        - name: build
-          run: cmake -B build && cd build && make && tests/tests
+    - name: run-tests
+      run: ./build/Google_tests/Google_tests
+      
+    - name: get-stats
+      run: lcov -t "tests" -o coverage.info -c -d .
+      
+    - name: genhtml
+      run: genhtml -o report coverage.info
