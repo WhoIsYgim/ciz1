@@ -46,7 +46,7 @@ TEST (ADD_WARSHIP, TEST_ADD_WARSHIP) {
 
 TEST (USER_INPUT, TEST_USER_INPUT){
 
-    char* input_str = "name";
+    char input_str[] = "name";
     FILE* in_stream = fmemopen(input_str, strlen(input_str),"r");
 
     char* test_buf = (char*) malloc(sizeof(char )*MAX_LEN);
