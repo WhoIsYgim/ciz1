@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/storage/storage.h
+warship.h
+../src/storage/warship.h
+stddef.h
+-
+
+../src/user_input/input.h
+stdio.h
+-
+
+../src/warship/warship.h
+
+/home/egornulllet/Документы/tpark/ciz1/tests/main.cpp
+gtest/gtest.h
+-
+
+/home/egornulllet/Документы/tpark/ciz1/tests/tests.cpp
+gtest/gtest.h
+-
+storage.h
+/home/egornulllet/Документы/tpark/ciz1/tests/storage.h
+warship.h
+/home/egornulllet/Документы/tpark/ciz1/tests/warship.h
+input.h
+/home/egornulllet/Документы/tpark/ciz1/tests/input.h
+

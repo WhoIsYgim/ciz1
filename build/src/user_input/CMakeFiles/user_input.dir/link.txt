@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuser_input.a  CMakeFiles/user_input.dir/input.c.o
+/usr/bin/ranlib libuser_input.a

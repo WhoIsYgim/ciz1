@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/egornulllet/Документы/tpark/ciz1/src/warship/warship.c
+warship.h
+/home/egornulllet/Документы/tpark/ciz1/src/warship/warship.h
+stdio.h
+-
+stdlib.h
+-
+
+/home/egornulllet/Документы/tpark/ciz1/src/warship/warship.h
+

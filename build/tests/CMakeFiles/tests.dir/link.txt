@@ -1,0 +1,1 @@
+/usr/bin/c++   -fprofile-arcs -ftest-coverage    CMakeFiles/tests.dir/main.cpp.o CMakeFiles/tests.dir/tests.cpp.o  -o tests  /usr/lib/x86_64-linux-gnu/libgtest.a ../src/warship/libwarship.a ../src/storage/libstorage.a ../src/user_input/libuser_input.a -lpthread ../src/warship/libwarship.a 

@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage   CMakeFiles/main.dir/main.c.o  -o main  src/warship/libwarship.a src/storage/libstorage.a src/user_input/libuser_input.a src/interface/libinterface.a src/storage/libstorage.a src/warship/libwarship.a src/user_input/libuser_input.a 
