@@ -1,2 +1,0 @@
-/usr/bin/ar qc libwarship.a  CMakeFiles/warship.dir/warship.c.o
-/usr/bin/ranlib libwarship.a
