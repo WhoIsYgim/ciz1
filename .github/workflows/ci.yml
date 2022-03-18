@@ -21,4 +21,4 @@ jobs:
           run: cmake -B build && cd build && make
 
         - name: run-tests
-          run: ./tests/tests
+          run: tests/tests
