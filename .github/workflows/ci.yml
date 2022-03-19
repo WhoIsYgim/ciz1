@@ -30,10 +30,7 @@ jobs:
         run: sudo apt install libgtest-dev lcov
 
       - name: build
-        run:  mkdir build && cd build && cmake .. && cmake --build .
-
-      - name: run-tests
-        run: ./tests/tests
+        run:  mkdir build && cd build && cmake .. && cmake --build . && ./tests/tests
 
       - name: get-stats
         run: lcov -t "tests" -o coverage.info -c -d .
