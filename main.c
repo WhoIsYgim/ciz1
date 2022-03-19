@@ -9,14 +9,6 @@
 #include "interface.h"
 #define MAX_LEN 100
 
-
-const char* name = "name";
-const char* shipyard = "ship";
-const char* condition = "cond";
-const char* year = "year";
-const char* crew = "crew";
-const char* stop = "stop";
-
 int main ()
 {
 
@@ -37,3 +29,4 @@ int main ()
     free(buf);
     free_storage(&storage);
 }
+

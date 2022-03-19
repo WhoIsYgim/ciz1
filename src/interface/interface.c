@@ -21,6 +21,11 @@ void console_output() {
 }
 
 void input_interface(Storage* storage, char* buf){
+    if(!storage || !buf) {
+        printf("%s","Memory allocation error...");
+        return;
+    }
+
     while (abs(strcmp(buf,"stop"))) {
 
         if (!strcmp(buf, "name")) {
