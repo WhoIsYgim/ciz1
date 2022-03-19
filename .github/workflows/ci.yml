@@ -18,7 +18,7 @@ jobs:
         run: sudo apt install libgtest-dev lcov
 
       - name: build
-        run: mkdir build && cd build && cmake --build .
+        run: mkdir build && cd build && cmake .. && cmake --build .
 
   test:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
         run: sudo apt install libgtest-dev lcov
 
       - name: build
-        run:  mkdir build && cd build && cmake --build .
+        run:  mkdir build && cd build && cmake .. && cmake --build .
 
       - name: run-tests
         run: ./tests/tests
